@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot UASD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-local"></div>
+            <h2>UASD Chat</h2>
+        </div>
+        <button class="new-chat-btn" onclick="nuevoChat()">+ Nuevo Chat</button>
+        <div class="history-list" id="historial">
+            <div class="history-item active">Consulta Actual</div>
+        </div>
+    </aside>
+
+    <main class="chat-container">
+            
+            <header class="chat-header">
+                <h1>Estatuto Orgánico UASD</h1>
+                <p>Asistente Virtual Institucional</p>
+            </header>
+
+            <!-- Área de conversación -->
+            <div id="chat" class="chat-messages">
+                <div class="message bot">
+                    ¡Hola! Soy tu asistente para el Estatuto Orgánico de la UASD. ¿Qué deseas consultar?
+                </div>
+            </div>
+
+            <!-- Preguntas sugeridas -->
+            <div class="preguntas-sugeridas">
+                <button onclick="preguntaRapida(this)">¿Qué es la UASD?</button>
+                <button onclick="preguntaRapida(this)">¿Qué es el Claustro Mayor?</button>
+                <button onclick="preguntaRapida(this)">Consejo Universitario</button>
+            </div>
+
+            <!-- Campo de texto y botón -->
+            <div class="input-area">
+                <input type="text" id="pregunta" placeholder="Escribe tu pregunta..." onkeypress="detectarEnter(event)">
+                <button id="btn-enviar" onclick="enviar()">Enviar</button>
+            </div>
+
+        </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
